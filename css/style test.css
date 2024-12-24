@@ -1,0 +1,387 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../images/sekiro.gif) no-repeat center center fixed; 
+    background-size: cover; 
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    padding-bottom: 50px; 
+}
+
+header {
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.logo h1:hover {
+    color: #b30101;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b30101;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    color: #b30101;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #b30101;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-info button:hover {
+    background-color: #b30101;
+}
+
+main {
+    padding: 80px 20px 100px 20px; 
+    transition: padding 0.3s ease;
+}
+
+footer {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed; 
+    bottom: 0; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer .contact-info {
+    margin-bottom: 10px;
+}
+
+footer .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .contact-info ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+footer .contact-info ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .contact-info ul li a:hover {
+    text-decoration: underline;
+    color: #b30101;
+}
+
+.slider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.slider img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+    transform: scale(1.05);
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider #prev-btn {
+    left: 10px;
+}
+
+.slider #next-btn {
+    right: 10px;
+}
+
+.slider #slide-info {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    border-color: #b30101;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #b30101;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color:#b30101;
+}
+
+.error {
+    color: #b30101;
+    font-size: 0.9em;
+}
+
+#test-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#test-result .correct {
+    color: #00ff00;
+}
+
+#test-result .incorrect {
+    color: #b30101;
+}
+
+#test-result button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b30101;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#test-result button:hover {
+    background-color: #b30101;
+}
+
+#term-description {
+    margin-top: 20px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+#term-description:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+#term-description p {
+    font-size: 16px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+    margin-bottom: 20px; 
+    transition: border-color 0.3s ease;
+}
+
+#search:focus {
+    border-color: #b30101;
+}
+
+#dictionary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dictionary-list li {
+    padding: 10px;
+    background-color: #222222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#dictionary-list li:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+#dictionary-list li.active {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 100px 10px 100px 10px;
+    }
+
+    .slider img {
+        max-width: 100%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    #dictionary-list li {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    #term-description {
+        padding: 15px;
+    }
+
+    #search {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    #test-result {
+        font-size: 1em;
+    }
+
+    #test-result button {
+        padding: 8px 15px;
+    }
+}
+
+.feedback.correct {
+    color: green; 
+}
+
+.feedback.incorrect {
+    color: red; 
+}

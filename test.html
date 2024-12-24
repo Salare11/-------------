@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по Sekiro Shadows Die Twice</title>
+    <link rel="stylesheet" href="css/style test.css">
+    <link rel="icon" href="images/app-development.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Sekiro: Shadows Die Twice Logo">
+            <h1> Тест по игре Sekiro: Shadows Die Twice</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="dictionary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html" class="active">Тест</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <span id="user-login"></span>
+            <button id="logout-btn" style="display: none;">Выйти</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="app-field">
+            <div class="app-window">
+                <div class="slide" id="slide2">
+                    <form id="test-form" novalidate>
+                        <div class="form-group">
+                            <label for="answer1">Как зовут главного героя игры?:</label>
+                            <input type="text" id="answer1" required>
+                            <div class="feedback" id="feedback1"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="answer2">Какой основной инструмент использует Секиро для передвижения и боя?:</label>
+                            <input type="text" id="answer2" required>
+                            <div class="feedback" id="feedback2"></div>
+                        </div>
+                        <div class="test-quest">
+                            <p>Вопрос 1: Какой из следующих врагов является боссом в игре?</p>
+                            <div class="answers">
+                                <input type="radio" name="q1" id="q1a" value="Геничиро" required>
+                                <label for="q1a">Геничиро</label>
+                                <input type="radio" name="q1" id="q1b" value="Кеноши">
+                                <label for="q1b">Кеноши</label>
+                                <input type="radio" name="q1" id="q1c" value="Ринго">
+                                <label for="q1c">Ринго</label>
+                            </div>
+                            <div class="feedback" id="feedbackQ1"></div>
+                        </div>
+                        <div class="test-quest">
+                            <p>Вопрос 2: Какое оружие позволяет секиро убивать бессмертных?</p>
+                            <div class="answers">
+                                <input type="radio" name="q2" id="q2a" value="Клинок бессмертных" required>
+                                <label for="q2a">Клинок бессмертных</label>
+                                <input type="radio" name="q2" id="q2b" value="Божественное конфетти">
+                                <label for="q2b">Божественное конфетти</label>
+                                <input type="radio" name="q2" id="q2c" value="Чёрный Клинок">
+                                <label for="q2c">Чёрный Клинок</label>
+                            </div>
+                            <div class="feedback" id="feedbackQ2"></div>
+                        </div>
+                        <div class="test-quest">
+                            <p>Вопрос 3: Какой из этих предметов используется для восстановления здоровья?</p>
+                            <div class="answers">
+                                <input type="radio" name="q3" id="q3a" value="Молитвенная шкатулка" required>
+                                <label for="q3a">Молитвенная шкатулка</label>
+                                <input type="radio" name="q3" id="q3b" value="Фляга с соком">
+                                <label for="q3b">Фляга с соком</label>
+                                <input type="radio" name="q3" id="q3c" value="Кристаллическая шкатулка">
+                                <label for="q3c">Кристаллическая шкатулка</label>
+                            </div>
+                            <div class="feedback" id="feedbackQ3"></div>
+                        </div>
+                        <div class="test-quest">
+                            <p>Вопрос 4: Какой предмет нужен для прокачки фляги Секиро?</p>
+                            <div class="answers">
+                                <input type="radio" name="q4" id="q4a" value="Семечко тыквы" required>
+                                <label for="q4a">Семечко тыквы</label>
+                                <input type="radio" name="q4" id="q4b" value="Щёлкающее семечко">
+                                <label for="q4b">Щёлкающее семечко</label>
+                                <input type="radio" name="q4" id="q4c" value="Красный сгусток">
+                                <label for="q4c">Красный сгусток</label>
+                            </div>
+                            <div class="feedback" id="feedbackQ4"></div>
+                        </div>
+                        <div class="btn-block">
+                            <button type="submit" class="act-btn">Проверить</button>
+                            <button type="button" id="retry-btn" class="act-btn">Пройти заново</button>
+                        </div>                        
+                    </form>
+                    <div id="results" style="margin-top: 20px; text-align: center;"></div> 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Контактные данные:</p>
+            <p>Телефон: +88005353535</p>
+            <p>Социальные сети:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 Sekiro: Shadows Die Twice Site</p>
+    </footer>
+
+    <script type="text/javascript" src="js/test.js"></script>
+    <script type="text/javascript" src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedLogin = localStorage.getItem('userLogin');
+            if (!storedLogin) {
+                
+                window.location.href = 'auth.html';
+            }
+
+            const testForm = document.getElementById('test-form');
+            const resultsDiv = document.getElementById('results');
+            const retryBtn = document.getElementById('retry-btn');
+
+            testForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const answers = {
+                    answer1: 'Секиро',
+                    answer2: 'Протез',
+                    q1: "Геничиро", 
+                    q2: "Клинок бессмертных", 
+                    q3: "Фляга с соком", 
+                    q4: "Семечко тыквы" 
+                };
+
+                let score = 0;
+                const userAnswers = {
+                    answer1: document.getElementById('answer1').value.trim(),
+                    answer2: document.getElementById('answer2').value.trim(),
+                    q1: document.querySelector('input[name="q1"]:checked'),
+                    q2: document.querySelector('input[name="q2"]:checked'),
+                    q3: document.querySelector('input[name="q3"]:checked'),
+                    q4: document.querySelector('input[name="q4"]:checked')
+                };
+
+                
+                if (userAnswers.answer1.toLowerCase() === 'секиро') {
+                    score++;
+                    document.getElementById('feedback1').innerText = "Правильный ответ";
+                } else {
+                    document.getElementById('feedback1').innerText = `Неправильный ответ. Правильный ответ: Секиро`;
+                }
+
+                if (userAnswers.answer2.toLowerCase() === 'протез') {
+                    score++;
+                    document.getElementById('feedback2').innerText = "Правильный ответ";
+                } else {
+                    document.getElementById('feedback2').innerText = `Неправильный ответ. Правильный ответ: Протез`;
+                }
+
+                if (userAnswers.q1 && userAnswers.q1.value === answers.q1) {
+                    score++;
+                    document.getElementById('feedbackQ1').innerText = "Правильный ответ";
+                } else {
+                    document.getElementById('feedbackQ1').innerText = `Неправильный ответ. Правильный ответ: Геничиро`;
+                }
+
+                if (userAnswers.q2 && userAnswers.q2.value === answers.q2) {
+                    score++;
+                    document.getElementById('feedbackQ2').innerText = "Правильный ответ";
+                } else {
+                    document.getElementById('feedbackQ2').innerText = `Неправильный ответ. Правильный ответ: Клинок бессмертных`;
+                }
+
+                if (userAnswers.q3 && userAnswers.q3.value === answers.q3) {
+                    score++;
+                    document.getElementById('feedbackQ3').innerText = "Правильный ответ";
+                } else {
+                    document.getElementById('feedbackQ3').innerText = `Неправильный ответ. Правильный ответ: Фляга с соком`;
+                }
+
+                if (userAnswers.q4 && userAnswers.q4.value === answers.q4) {
+                    score++;
+                    document.getElementById('feedbackQ4').innerText = "Правильный ответ";
+                } else {
+                    document.getElementById('feedbackQ4').innerText = `Неправильный ответ. Правильный ответ: Семечко тыквы`;
+                }
+
+                
+                resultsDiv.innerHTML = `
+                    <p style="font-size: 24px; color: black; text-align: center;">Вы ответили на ${score} из 6 вопросов верно.</p>
+                `;
+                localStorage.setItem('testResult', score);
+            });
+
+            
+            retryBtn.addEventListener('click', () => {
+                testForm.reset(); 
+                resultsDiv.innerHTML = ''; 
+                document.getElementById('feedback1').innerText = '';
+                document.getElementById('feedback2').innerText = '';
+                document.getElementById('feedbackQ1').innerText = '';
+                document.getElementById('feedbackQ2').innerText = '';
+                document.getElementById('feedbackQ3').innerText = '';
+                document.getElementById('feedbackQ4').innerText = '';
+            });
+        });
+    </script>
+</body>
+
+</html>

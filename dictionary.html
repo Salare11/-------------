@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словарь</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Sekiro: Shadows Die Twice Logo">
+            <h1>Sekiro: Shadows Die Twice</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="dictionary.html" class="active">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="test.html">Тест</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <span id="user-login"></span>
+            <button id="logout-btn" style="display: none;">Выйти</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Словарь</h2>
+            <input type="text" id="search" placeholder="Поиск...">
+            <ul id="dictionary-list">
+                <li data-term="Секиро">Секиро</li>
+                <li data-term="Замок Асина">Замок Асина</li>
+                <li data-term="Драконье поветрие">Драконье поветрие</li>
+                <li data-term="Статуя Будды">Статуя Будды</li>
+                <li data-term="Глубины Асина">Глубины Асина</li>
+                <li data-term="Принц Куро">Принц Куро</li>
+                <li data-term="Бусина от чёток">Бусина от чёток</li>
+                <li data-term="Драже">Драже</li>
+                <li data-term="Госпожа Бабочка">Госпожа Бабочка</li>
+                <li data-term="Клинок бессмертных">Клинок бессмертных</li>
+            </ul>
+            <div id="term-description"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>Контактные данные:</p>
+            <p>Телефон: +88005353535</p>
+            <p>Социальные сети:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Sekiro: Shadows Die Twice</p>
+    </footer>
+    <script src="js/dictionary.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedLogin = localStorage.getItem('userLogin');
+            if (!storedLogin) {
+                
+                window.location.href = 'auth.html';
+            }
+        });
+    </script>    
+</body>
+</html>
