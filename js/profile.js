@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('userDob');
             localStorage.removeItem('userGender');
             localStorage.removeItem('testResult');
-            window.location.href = 'auth.html';
+            window.location.href = 'index.html';
         });
     }
 });
